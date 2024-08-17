@@ -18,7 +18,7 @@
 
 .chat{
     flex: 0 0 calc(50% - 30px);
-    background-color: lightcoral;
+    background-color: rgb(214, 214, 228);
     padding: 10px 20px 10px 10px;
 }
 
