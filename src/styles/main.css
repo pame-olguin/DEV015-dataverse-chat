@@ -23,15 +23,19 @@
   header {
     margin-bottom: 20px;
     text-align: center; /* Centra el contenido del header */
-    background-image: linear-gradient(rgba(43, 3, 47, 0.35), rgba(144, 109, 137, 0.244)),url("imagen2.jpg");
+    background-image: linear-gradient(rgba(60, 38, 66, 0.35), rgba(141, 149, 160, 0.244)),url("imagen2.jpg");
 
   }
       
   body header h1 {
     margin: 30px; /* Espacio superior */
     font-size: 3em; /* Tamaño de fuente */
-    color:#8c637c
+    color:#dfedf5
    
+  }
+
+  .filter-controls {
+    text-align: center;
   }
 
 footer {
