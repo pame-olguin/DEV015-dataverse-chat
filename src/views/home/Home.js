@@ -63,40 +63,40 @@ const Home = (params) => {
   filterControls.appendChild(cleanButton);
   controls.appendChild(filterControls);
 
-    let items;
+  let items;
    
-    if( params.category !== '' ){
-      const filtered = filterData(data,'mainField',params.category);
-      items = renderItems(sortData(filtered,params.order));
-    }
-    else{
-      items = renderItems(sortData(data,params.order));
-    }
+  if( params.category !== '' ){
+    const filtered = filterData(data,params.category);
+    items = renderItems(sortData(filtered,params.order));
+  }
+  else{
+    items = renderItems(sortData(data,params.order));
+  }
 
-    const view = document.createElement('div');
+  const view = document.createElement('div');
 
-    const link = document.createElement('link');
-    // Set the necessary attributes
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = './views/home/style.css'; // Replace with the path to your CSS file
-    view.appendChild(link);
+  const link = document.createElement('link');
+  // Set the necessary attributes
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = './views/home/style.css'; // Replace with the path to your CSS file
+  view.appendChild(link);
 
-    view.appendChild(controls);
+  view.appendChild(controls);
 
-    const cardsRoot = document.createElement('div');
-    cardsRoot.setAttribute('id','cards_root');
+  const cardsRoot = document.createElement('div');
+  cardsRoot.setAttribute('id','cards_root');
 
-    for(const card of items){
-      cardsRoot.appendChild(card);
-    }
+  for(const card of items){
+    cardsRoot.appendChild(card);
+  }
 
-    view.appendChild(cardsRoot);
+  view.appendChild(cardsRoot);
 
-    const facts = document.querySelector("#curious_fact");
-    facts.textContent = renderStats(computeStats(data));
+  const facts = document.querySelector("#curious_fact");
+  facts.textContent = renderStats(computeStats(data));
 
-    return view;
-  };
+  return view;
+};
   
 export default Home;

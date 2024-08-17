@@ -49,6 +49,11 @@ window.addEventListener("DOMContentLoaded", () => {
       alert('Por favor ingrese la API KEY de Open Ai!');
     }else{
       setApiKey(apiKey);
+      inputKey.value='';
+
+      // ocultamos el formulario de nuevo
+      const form = document.getElementById('apikeyform');
+      form.classList.add('hidden');
       alert('Api Key fue guardado con éxito.');
     }
 

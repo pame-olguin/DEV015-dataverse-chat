@@ -3,13 +3,13 @@ import data from '../src/data/dataset.js';
 // Test de filterData
 describe('filterData', () => {
   it('debería filtrar los datos por mainField correctamente. Hay 6 matemáticas.', () => {
-    const filteredData = filterData(data, 'mainField','Matemáticas');
+    const filteredData = filterData(data,'Matemáticas');
     expect(filteredData).toBeInstanceOf(Array);
     expect(filteredData.length).toBe(6);
   });
 
   it('debería filtrar los datos por mainField correctamente. Hay 4 quimicas.', () => {
-    const filteredData = filterData(data, 'mainField','Química');
+    const filteredData = filterData(data,'Química');
     expect(filteredData).toBeInstanceOf(Array);
     expect(filteredData.length).toBe(4);
   });
@@ -30,6 +30,6 @@ describe('sortData', () => {
 describe('computeStats', () => {
   it('debería computar estadísticas básicas de los datos', () => {
     const stats = computeStats(data);
-    expect(stats.count).toBe(data.length);
+    expect(Object.keys(stats).length).toBe(12);
   });
 });
