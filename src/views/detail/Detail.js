@@ -1,5 +1,6 @@
 import data from '../../data/dataset.js'; //importa data
 import { renderCard } from '../../card.js';
+import { communicateWithOpenAI } from '../../lib/openAIApi.js';
 
 const ExtractDataDetailById = (id) => {
   return data.filter((el)=>{ return el.id === id; })[0] || [];
@@ -57,7 +58,12 @@ const Detail = (params) => {
 
     button.addEventListener('click',function(){
       const messageBox = document.querySelector('textarea[name="message"]');
-      alert(messageBox.value);
+      const messages = [
+        //{ role: 'system', content: 'You are a helpful assistant.' },
+        { role: 'user', content: messageBox.value.trim() }
+      ];
+
+      communicateWithOpenAI(messages);
     });
 
     div2.appendChild(button);
