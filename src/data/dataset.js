@@ -132,7 +132,7 @@ export default[
     "name": "Grace Hopper",
     "shortDescription": "Científica de la computación, creadora del primer compilador.",
     "descripción": "Una de las pioneras de la informática, es famosa por su contribución al desarrollo del primer compilador y al lenguaje de programación COBOL. Además, desafió los estereotipos de género en la década de 1940 al unirse a la Marina de los Estados Unidos y convertirse en la primera programadora de la computadora Harvard Mark I. Su legado abarca la creación de conceptos cruciales como la \"depuración de software\" y su influencia en el desarrollo de la informática moderna, estableciendo estándares para la programación de alto nivel y la innovación tecnológica.",
-    "imageUrl": "https://cyberwarmag.com/wp-content/uploads/2023/05/Grace-Hopper2.jpg",
+    "imageUrl": "https://mujeresconciencia.com/app/uploads/2020/01/800px-Commodore_Grace_M._Hopper_USN_covered_head_and_shoulders_crop-768x1021.jpg",
     "facts": {
       "yearOfBirth": "1906",
       "yearOfDeath": "1992",
