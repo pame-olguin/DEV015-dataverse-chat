@@ -10,10 +10,10 @@
   }
   .card {
      margin: 10px;
-     border: 2px solid #ddd; /* Borde de la tarjeta */
+     border: 2px solid #f3b1dc; /* Borde de la tarjeta */
      border-radius: 30px 30px 30px 30px; /* Bordes redondeados */
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-     background:#45169c; /* Color de fondo de las tarjetas */
+     background:#efb6e2; /* Color de fondo de las tarjetas */
      text-align: left;
      flex: 1 0 calc(25% - 40px); /* Cada tarjeta ocupará un 40% del ancho del contenedor, menos el espacio del gap */
      box-sizing: border-box;
@@ -31,7 +31,7 @@
         margin-bottom: 10px; /* Espaciado inferior entre ítems */
         font-size: 17px;
         text-align:center;
-        color: rgb(245, 244, 235);
+        color: rgb(44, 42, 59);
         width: 100%;
   }
 
@@ -51,28 +51,28 @@
   select{
     background-color: #fdfdfd;
     color: rgb(109, 106, 109);
-    font-size: 1.1em
+    font-size: 1em;
+    border-radius: 30px;
 
   } 
   label{
     margin:15px;
-    color: rgb(51, 47, 51);
-    text-shadow: 2px 2px 5px rgb(234, 220, 220);
-    font-size: 1.em
+    color: #f3eded;
+    font-size: 1em;
   }
   button{
     border-radius: 20px;
     margin:15px;
     padding: 10px;
-    border: 1px solid #33ad73;
-    color: #33ad73;;
+    border: 1px solid #f3639d;
+    color: #79103d;;
     font-size: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   /* Cambia el color de fondo cuando el cursor pasa por encima */
 button:hover {
-  background-color: #a8f9ca;
+  background-color: #e586c5;
 }
                  
   @media (max-width: 900px) {

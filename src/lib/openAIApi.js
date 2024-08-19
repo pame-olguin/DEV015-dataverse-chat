@@ -34,7 +34,24 @@ export const communicateWithOpenAI = async (messages) => {
         console.log('Response from OpenAI:', data);
 
         const assistantMessage = data.choices[0].message.content;
-        alert(assistantMessage);
+        //alert(assistantMessage);
+
+        const messagesDiv = document.querySelector('.messages');
+
+        const p = document.createElement('p');
+        p.classList.add('ai-message');
+        p.innerHTML=assistantMessage;
+        messagesDiv.appendChild(p);
+
+        const messageBox = document.querySelector('textarea[name="message"]');
+        messageBox.value='';
+        messageBox.focus();
+
+        const button = document.querySelector('#send');
+        button.classList.remove('hidden');
+
+        const loading = document.querySelector('#loading');
+        loading.classList.add('hidden');
 
       })
       .catch(error => {

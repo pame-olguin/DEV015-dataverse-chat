@@ -24,5 +24,18 @@
 
 .write textarea, .write button{
     width: 100%;
+}
 
+.messages{
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.messages p{
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0px;
+}
+
+.messages p.ai-message{
+    color: blue;
 }

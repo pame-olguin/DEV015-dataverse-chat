@@ -10,7 +10,7 @@
   
   body {
     font-family: Arial, sans-serif; /* Define la fuente */
-    background-color:#f4f4f4; /* Color de fondo suave */
+    background-color:#ebf2f6; /* Color de fondo suave */
     padding: 0px; 
     border: 0px;
     margin: 0px;
@@ -22,7 +22,8 @@
   header {
     background-color:#370e3f ;
     background-image: url(../inspiracion.jpg);
-    color: #add1f2;
+    background-position:left ;
+    color: #404d58;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -40,7 +41,7 @@
 
 footer {
     max-width: 100%;
-    background-color:#69686a ;
+    background-color:#370e3f  ;
     padding: 20px;
     bottom: 0%;
     text-align: center;
@@ -50,8 +51,8 @@ footer {
   }
   #curious_fact{
     max-width: 100%;
-    background:#0854e3;
-    padding: 10px;
+    background:#539ac0;
+    padding: 20px;
     text-align: center;
     margin-top: 10px;
     color: rgb(244, 228, 244);
