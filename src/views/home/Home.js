@@ -1,6 +1,6 @@
 import data from '../../data/dataset.js'; //importa data
-import { renderItems, renderStats } from '../../view.js'; //importa view
-import { filterData,sortData,computeStats } from '../../lib/dataFunctions.js';
+import { renderItems } from '../../view.js'; //importa view
+import { filterData,sortData } from '../../lib/dataFunctions.js';
 import { renderCategories } from '../../categories.js'; //importa categories
 import { navigateTo } from '../../router.js';
 
@@ -92,9 +92,6 @@ const Home = (params) => {
   }
 
   view.appendChild(cardsRoot);
-
-  const facts = document.querySelector("#curious_fact");
-  facts.textContent = renderStats(computeStats(data));
 
   return view;
 };

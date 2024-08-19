@@ -15,9 +15,9 @@ export const renderCard = (card, full_data=false) => {  //creando la constante p
   const yearOfDeath = card['facts']['yearOfDeath'] ? card['facts']['yearOfDeath'] : '-';
   let datos = `
       <li itemprop="image" class="item"><img src="${card['imageUrl']}" alt="Imagen de ${card['name']}" /></li>
-      <li itemprop="name" class="item">${card['name']}</li>`; //creando tarjeta que contiene informacion, debe ser trabajada en css
+      <li itemprop="name" class="item name">${card['name']}</li>`; //creando tarjeta que contiene informacion, debe ser trabajada en css
   if (full_data){
-    datos = datos + `<li itemprop="description" class="item">Descripción: ${card['shortDescription']}</li>
+    datos = datos + `<li itemprop="description" class="item">${card['shortDescription']}</li>
       <li itemprop="birthDate" class="item">Año de Nacimiento: ${card['facts']['yearOfBirth']}</li>
       <li itemprop="deathDate" class="item">Fecha de Muerte: ${yearOfDeath}</li>
       <li itemprop="birthPlace" class="item">Lugar de Nacimiento: ${card['facts']['birthPlace']}</li>

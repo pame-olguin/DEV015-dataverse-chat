@@ -1,10 +1,14 @@
+import data from '../../data/dataset.js'; //importa data
 import Home from './views/home/Home.js';
 import Detail from './views/detail/Detail.js';
 import Error from './views/Error.js';
 import { setApiKey } from './lib/apiKey.js';
 
+import { renderStats } from './view.js'; //importa view
+import { computeStats } from './lib/dataFunctions.js';
+
 // Importa otras vistas según sea necesario
-import { setRootEl, setRoutes, onURLChange } from './router.js';
+import { setRootEl, setRoutes, onURLChange, navigateTo } from './router.js';
 
 // Define las rutas y las vistas asociadas
 const routes = {
@@ -58,5 +62,13 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
   });
+
+  const h1 = document.querySelector('h1');
+  h1.addEventListener('click',function(){
+    navigateTo('/');
+  });
+
+  const facts = document.querySelector("#curious_fact");
+  facts.textContent = renderStats(computeStats(data));
 
 });

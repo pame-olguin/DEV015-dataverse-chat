@@ -31,7 +31,7 @@ const Detail = (params) => {
     view.append(renderCard(cardData, true));
     const right = document.createElement('div');
     right.classList.add('chat');
-    right.innerHTML=`<h2>Chatea Conmigo:</h2>`;
+    
     const messagesDiv = document.createElement('div');
     messagesDiv.classList.add('messages');
 
@@ -42,6 +42,7 @@ const Detail = (params) => {
     const textarea = document.createElement('textarea');
     textarea.setAttribute('name','message');
     textarea.setAttribute('rows',6);
+    textarea.setAttribute('placeholder','Chatea conmigo aqui...');
     div1.appendChild(textarea);
 
     const div2 = document.createElement('div');

@@ -23,7 +23,7 @@
     background-color:#370e3f ;
     background-image: url(../inspiracion.jpg);
     background-position:left ;
-    color: #404d58;
+    color: #fefefe;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -32,6 +32,7 @@
   header h1 {
     margin: 0;
     font-size: 2.5rem;
+    cursor: pointer;
   }
 
   .filter-controls {
@@ -51,12 +52,12 @@ footer {
   }
   #curious_fact{
     max-width: 100%;
-    background:#539ac0;
+    background:#0c8295;
     padding: 20px;
     text-align: center;
-    margin-top: 10px;
     color: rgb(244, 228, 244);
     font-size:1.5em;
+    font-family: Arial, sans-serif;
   }
   h3{
     color: rgb(128, 75, 128);

@@ -60,7 +60,7 @@ export const communicateWithOpenAI = async (messages) => {
         console.error('There was an error with the fetch operation:', error);
       });
 
-    console.log(response,'FIN');
+    //console.log(response,'FIN');
 
   } catch (error) {
     console.error('Error comunicándose con OpenAI:', error);
