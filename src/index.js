@@ -63,11 +63,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   });
 
-  const h1 = document.querySelector('h1');
-  h1.addEventListener('click',function(){
-    navigateTo('/');
-  });
-
   const facts = document.querySelector("#curious_fact");
   facts.textContent = renderStats(computeStats(data));
 

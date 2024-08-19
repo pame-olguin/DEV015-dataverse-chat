@@ -23,7 +23,6 @@
     background-color:#370e3f ;
     background-image: url(../inspiracion.jpg);
     background-position:left ;
-    color: #fefefe;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -33,6 +32,11 @@
     margin: 0;
     font-size: 2.5rem;
     cursor: pointer;
+  }
+
+  header h1 a{
+    text-decoration: none;
+    color: #fefefe;
   }
 
   .filter-controls {
