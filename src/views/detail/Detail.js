@@ -61,7 +61,7 @@ const Detail = (params) => {
       }
 
       const messages = [
-        //{ role: 'system', content: 'You are a helpful assistant.' },
+        { role: 'system', content: 'Suppose that you are '+cardData['name'] },
         { role: 'user', content: userMessage }
       ];
 
