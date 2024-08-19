@@ -53,6 +53,8 @@ export const communicateWithOpenAI = async (messages) => {
         const loading = document.querySelector('#loading');
         loading.classList.add('hidden');
 
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
       })
       .catch(error => {
         console.error('There was an error with the fetch operation:', error);
