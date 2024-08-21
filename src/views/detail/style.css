@@ -1,14 +1,15 @@
-
-.detail-card{
+.detail-card {
     display: flex;
     width: 100%;
+    background-color: #ccc;
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
 }
 
-.card{
+.card {
     flex: 0 0 calc(50% - 20px);
-    background-color: #f8cafd;
-    padding: 10px 0px 10px 10px;
-    margin:0;
+    background-color:#ccc ;
+    padding: 0px 0px 0px 10px;
+    margin: 10px 0px;
     list-style-type: none;
     font-size: 1rem;
     color: #666;
@@ -16,42 +17,44 @@
     line-height: 1.5;
 }
 
-.card img{
+.card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 20px; 
-    
+    margin-bottom: 0px;
 }
 
-.card li.name{
+.card li.name {
     font-weight: bold;
 }
 
-h2{
-    color:blueviolet;
+h2 {
+    color: blueviolet;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
-
 }
 
-.chat{
+.chat {
     flex: 1; /* Ocupa la otra mitad del contenedor */
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: #f8cafd;
+    background-color:#ccc  ;
 }
 
-.write textarea{
-    width:100%;
+.write{
+    margin-top: 5px;
+}
+
+.write textarea {
+    width: 100%;
     padding: 10px;
     border-radius: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-.write button{
+.write button {
     width: 100%;
     padding: 10px 20px;
     font-size: 1rem;
@@ -62,10 +65,12 @@ h2{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .write button:hover {
     background-color: #0056b3;
 }
-.messages{
+
+.messages {
     height: 400px;
     overflow-y: scroll;
     background-color: rgb(255, 254, 254);
@@ -73,16 +78,50 @@ h2{
     border-radius: 10px;
 }
 
-.messages p{
+.messages p {
     background-color: antiquewhite;
     border-radius: 20px;
     border-bottom: 2px solid #ccc;
     padding: 10px 10px;
     margin: 10px;
-
 }
 
-.messages p.ai-message{
+.messages p.ai-message {
     color: blue;
     text-align: justify;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .card, .chat {
+        flex: 0 0 100%; /* Las columnas ocupan el 100% del ancho */
+        margin: 0px; /* Añade un poco de margen entre las columnas */
+        padding: 10px;
+    }
+
+    .messages {
+        height: 300px; /* Ajusta la altura del área de mensajes en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em; /* Aumenta el tamaño de la fuente para una mejor legibilidad en móviles */
+    }
+
+    .write textarea {
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .write button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+
+    .messages p {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
 }
