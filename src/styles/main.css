@@ -22,12 +22,13 @@
   header {
     background-color:#370e3f ;
     background-image: url(../inspiracion.jpg);
+    width: 100%; /* Ajusta el ancho de la imagen según sea necesario */
     background-position:left ;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+ 
   header h1 {
     margin: 0;
     font-size: 2.5rem;
@@ -37,6 +38,11 @@
   header h1 a{
     text-decoration: none;
     color: #fefefe;
+    font-family: 'Playfair Display', serif; /* Elige la fuente que prefieras */
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra oscura que mejora la legibilidad */
+    text-align: center;
+    margin: 20px 0;
   }
 
   .filter-controls {
@@ -56,7 +62,7 @@ footer {
   }
   #curious_fact{
     max-width: 100%;
-    background:#0c8295;
+    background:#c742c4;
     padding: 20px;
     text-align: center;
     color: rgb(244, 228, 244);

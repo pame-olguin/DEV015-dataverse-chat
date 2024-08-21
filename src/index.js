@@ -8,7 +8,7 @@ import { renderStats } from './view.js'; //importa view
 import { computeStats } from './lib/dataFunctions.js';
 
 // Importa otras vistas según sea necesario
-import { setRootEl, setRoutes, onURLChange, navigateTo } from './router.js';
+import { setRootEl, setRoutes, onURLChange } from './router.js';
 
 // Define las rutas y las vistas asociadas
 const routes = {
@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", () => {
   button.addEventListener('click',function(){
     
     const inputKey = document.querySelector('input[name="apikey"]');
-    const apiKey = inputKey.value;
+    const apiKey = inputKey.value.trim();
 
     if( !apiKey ){
       alert('Por favor ingrese la API KEY de Open Ai!');
