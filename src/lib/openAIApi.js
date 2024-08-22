@@ -61,6 +61,7 @@ export const communicateWithOpenAI = async (messages) => {
       });
 
     //console.log(response,'FIN');
+    return response;
 
   } catch (error) {
     console.error('Error comunicándose con OpenAI:', error);
