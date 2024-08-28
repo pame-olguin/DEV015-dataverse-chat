@@ -1,5 +1,6 @@
 import data from '../../data/dataset.js'; //importa data
 import { renderCard } from '../../card.js';
+import { communicateWithOpenAI } from '../../lib/openAIApi.js';
 
 const ExtractDataDetailById = (id) => {
   return data.filter((el)=>{ return el.id === id; })[0] || [];
@@ -30,15 +31,9 @@ const Detail = (params) => {
     view.append(renderCard(cardData, true));
     const right = document.createElement('div');
     right.classList.add('chat');
-    right.innerHTML=`<h2>Chatea Conmigo:</h2>`;
+    
     const messagesDiv = document.createElement('div');
     messagesDiv.classList.add('messages');
-
-    for(let i=0; i<10; i++){
-      const p = document.createElement('p');
-      p.innerHTML="Lorem ipsum dolor sit amet";
-      messagesDiv.appendChild(p);
-    }
 
     const writeDiv = document.createElement('div');
     writeDiv.classList.add('write');
@@ -47,6 +42,7 @@ const Detail = (params) => {
     const textarea = document.createElement('textarea');
     textarea.setAttribute('name','message');
     textarea.setAttribute('rows',6);
+    textarea.setAttribute('placeholder','Chatea conmigo aqui...');
     div1.appendChild(textarea);
 
     const div2 = document.createElement('div');
@@ -57,10 +53,38 @@ const Detail = (params) => {
 
     button.addEventListener('click',function(){
       const messageBox = document.querySelector('textarea[name="message"]');
-      alert(messageBox.value);
+      const userMessage = messageBox.value.trim();
+
+      if(!userMessage){
+        alert('Por favor ingrese su solicitud!');
+        return false;
+      }
+
+      const messages = [
+        { role: 'system', content: 'Suppose that you are '+cardData['name'] },
+        { role: 'user', content: userMessage }
+      ];
+
+      const p = document.createElement('p');
+      p.innerHTML=userMessage;
+      p.classList.add('user-message');
+      messagesDiv.appendChild(p);
+
+      this.classList.add('hidden');
+
+      const loading = document.querySelector('#loading');
+      loading.classList.remove('hidden');
+
+      communicateWithOpenAI(messages);
     });
 
     div2.appendChild(button);
+
+    const loading = document.createElement('img');
+    loading.setAttribute('id','loading');
+    loading.setAttribute('src','https://media.tenor.com/YyiAFrG9bFMAAAAj/loading-buffering.gif');
+    loading.classList.add('hidden');
+    div2.appendChild(loading);
 
     writeDiv.appendChild(div1);
     writeDiv.appendChild(div2);

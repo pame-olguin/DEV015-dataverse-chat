@@ -1,7 +1,11 @@
+import data from '../../data/dataset.js'; //importa data
 import Home from './views/home/Home.js';
 import Detail from './views/detail/Detail.js';
 import Error from './views/Error.js';
 import { setApiKey } from './lib/apiKey.js';
+
+import { renderStats } from './view.js'; //importa view
+import { computeStats } from './lib/dataFunctions.js';
 
 // Importa otras vistas según sea necesario
 import { setRootEl, setRoutes, onURLChange } from './router.js';
@@ -43,7 +47,7 @@ window.addEventListener("DOMContentLoaded", () => {
   button.addEventListener('click',function(){
     
     const inputKey = document.querySelector('input[name="apikey"]');
-    const apiKey = inputKey.value;
+    const apiKey = inputKey.value.trim();
 
     if( !apiKey ){
       alert('Por favor ingrese la API KEY de Open Ai!');
@@ -58,5 +62,8 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
   });
+
+  const facts = document.querySelector("#curious_fact");
+  facts.textContent = renderStats(computeStats(data));
 
 });
