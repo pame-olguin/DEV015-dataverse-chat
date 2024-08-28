@@ -51,6 +51,7 @@ export const communicateWithOpenAI = async (messages, updateHtml = true) => {
       })
       .catch(error => {
         //console.error('There was an error with the fetch operation:', error);
+        console.log(error);
         throw new Error(`Network error`);
       });
 
