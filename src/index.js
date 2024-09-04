@@ -15,7 +15,6 @@ const routes = {
   '/': Home,
   '/detail': Detail,
   '/error': Error,
-  // Agrega más rutas y vistas aquí
 };
 
 // Configura las rutas
@@ -23,7 +22,7 @@ setRoutes(routes);
 
 // Asigna el elemento raíz donde se renderizarán las vistas
 window.addEventListener("DOMContentLoaded", () => {
-  // Supongamos que tu elemento raíz en el HTML es un div con id 'root'
+  // elemento raíz en el HTML es un div con id 'root'
   const rootElement = document.getElementById('root');
   setRootEl(rootElement);
 
