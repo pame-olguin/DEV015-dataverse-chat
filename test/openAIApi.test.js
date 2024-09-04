@@ -10,7 +10,7 @@ describe('communicateWithOpenAI', () => {
       jest.clearAllMocks();
     });
   
-    it('should fetch and return a response from OpenAI', async () => {
+    it('hace llamada de fetch y retorna una respuesta de OpenAI', async () => {
       fetch.mockResolvedValue({
         ok: true,
         json: async () => ({
